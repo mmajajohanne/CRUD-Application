@@ -1,0 +1,45 @@
+﻿@page
+@model BookApp.Pages.EditBookModel
+@{
+    ViewData["Title"] = "Edit Book";
+}
+
+    <div>
+
+    <h1>Edit Book</h1>
+
+
+    <form name="bookForm" id="bookForm" method="post">
+
+        <input name="bookId" type="text" value="@Model.bookdb.BookId" hidden/>
+
+        Title:
+        <br />
+        <input name="bookTitle" type="text" value="@Model.bookdb.Title" class="form-control input-lg" autofocus required />
+        <br />
+
+        ISBN:
+        <br />
+        <input name="bookIsbn" type="text" value="@Model.bookdb.Isbn" class="form-control input-lg" required />
+        <br />
+
+        Publisher:
+        <br />
+        <input name="bookPublisher" type="text" value="@Model.bookdb.PublisherName" class="form-control input-lg" required />
+        <br />
+
+        Author:
+        <br />
+        <input name="bookAuthor" type="text" value="@Model.bookdb.AuthorName" class="form-control input-lg" required />
+        <br />
+
+        Category:
+        <br />
+        <input name="bookCategory" type="text" value="@Model.bookdb.CategoryName" class="form-control input-lg" required />
+        <br />
+
+        <input id="saveButton" type="submit" value="Save" class="btn btn-info" />
+
+    </form>
+
+    </div>
